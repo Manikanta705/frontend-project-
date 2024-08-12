@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login && Register from</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <nav class="nav">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+<div class="navmenu">
+    <ul>
+        <li><a href="#"class="link active">Home</a></li>
+        <li><a href="#"class="link">Contact</a></li>
+        <li><a href="#"class="link">Services</a></li>
+        <li><a href="#"class="link">About</a></li>
+    </ul>
+</div>
+<div class="nav-button">
+    <button class="sign white-btn" id="loginbtn" onclick="login()">sign in</button>
+    <button class="sign"id="registerbtn" onclick="register()">sign up</button>
+</div>
+<div class="NAV-menu-btn">
+<i class="bx bx-menu"onclick="myMenuFunction()"></i>
+</div>
+    </nav>
+    <div class="form-bx">
+        <div class="login-container"id="login">
+            <div class="top">
+                <span>Don't Have an account? <a href="#"onclick="register()">sign up</a></span>
+                <header>Login</header>
+            </div>
+           
+                <div class="input-box">
+                    <input type="email"class="input-field"Placeholder="Usernam or email">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password"class="input-field"Placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit"class="submit"value="signin">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox"id="login-check">
+                        <label for="login-check">Remember</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Forgot Password?</a></label>
+                    </div>
+                </div>
+        </div>
+        <div class="register-container"id="register">
+            <div class="top">
+                <span>Have an account? <a href="#"onclick="login()">Login</a></span>
+                <header>sign up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text"class="input-field"Placeholder="firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text"class="input-field"Placeholder="Lastname">
+                </div>
+            </div>
+                <div class="input-box">
+                    <input type="email"class="input-field"Placeholder="email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password"class="input-field"Placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit"class="submit"value="Register">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox"id="register-check">
+                        <label for="register-check">Remember</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script>
+    
+    var a=document.getElementById("registerbtn");
+    var b=document.getElementById("loginbtn");
+    var x=document.getElementById("register");
+    var y=document.getElementById("login");
+    function register(){
+        y.style.left="-500px";
+        x.style.right="6px";
+        a.className+=" sign white-btn";
+        b.className="sign";
+    }
+ function login(){
+    y.style.left="5px";
+     x.style.right="-600px";
+     a.className="sign";
+    b.className+=" sign white-btn";
+ }
+</script>
+</body>
+</html>
